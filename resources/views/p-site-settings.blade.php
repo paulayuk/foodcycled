@@ -12,7 +12,7 @@
                 <span class="login-status online"></span> <!--change to offline or busy as needed-->              
               </div>
               <div class="nav-profile-text d-flex flex-column">
-                <span class="font-weight-bold mb-2">Name</span>
+                <span class="font-weight-bold mb-2">{{Auth::user()->organization_name}}</span>
                 <span class="text-secondary text-small">{{ Auth::user()->address }}</span>
               </div>
               <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>

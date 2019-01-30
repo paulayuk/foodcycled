@@ -22,6 +22,10 @@
                          <option value="user">User</option>
                       </select>
                     </div>
+                     <div class="form-group">
+                        <input id="name" type="text" name="name" required  class="input-material">
+                      <label for="login-password" class="label-material">Name</label>
+                   </div>
                     <div class="form-group">
                                
                       <input id="email" type="email" name="email" required  class="input-material">
@@ -56,26 +60,19 @@
                     <div class="form-group">
                       <label for="exampleFormControlSelect1">Account Type:</label>
                       <select class="account_type" name="account_type" id="account_type">
-                        <option></option>
+                        <option>Choose Account Type:</option>
                          <option value="individual">Individual</option>
                          <option Value="organization">Organization</option>
                       </select>
                     </div>             
                     <div class="form-group">
-                      <label for="exampleFormControlSelect1">State</label>
-                      <select class="state" name="state" id="state">
-                        <option></option>
-                         <option value="New York">New York</option>
-                         <option Value="New Jersey">New Jersey</option>
-                      </select>
+                     
+                       <input id="state" type="text" name="state" required  class="input-material">
+                      <label for="login-password" class="label-material">State</label>
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlSelect1">City</label>
-                        <select class="city" name="city" id="city">
-                          <option></option>
-                          <option value="New York">New York</option>
-                          <option>New Jersey</option>
-                        </select>
+                        <input id="city" type="text" name="city" required  class="input-material">
+                      <label for="login-password" class="label-material">city</label>
                    </div>
                      <div class="form-group">
                       <input id="zipcode" type="text" name="zipcode" required  class="input-material">

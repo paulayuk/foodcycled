@@ -14,7 +14,7 @@
                      @csrf
                  <span style="color: blue; font-weight: bold">Thanks for donating</span>
                     <div class="form-group">
-                      <input id="orgname" type="text" name="orgname" required  class="input-material">
+                      <input id="name" type="text" name="name" required  class="input-material">
                       <label for="login-username" class="label-material">Your Name or Organization name</label>
                     </div>
                     <div class="form-group">
@@ -32,31 +32,24 @@
                    <div class="form-group">
                       <label for="exampleFormControlSelect1">Account Type:</label>
                       <select class="account_type" name="account_type" id="account_type">
-                        <option></option>
+                        <option>Choose your category</option>
                          <option value="individual">Individual</option>
                          <option Value="organization">Organization</option>
                       </select>
                     </div> 
                     
-                 <div class="form-group">
-                    <label for="state">State</label>
-                    <select class="form-control form-control-lg" name="state" id="state">
-                      <option></option>
-                       <option value="NewYork">New York</option>
-                      <option>New Jersey</option>
-                    </select>
-                  </div>
-                 <div class="form-group">
-                    <label for="exampleFormControlSelect1">City</label>
-                    <select class="form-control form-control-lg" id="city">
-                      <option></option>
-                      <option value="NewYork">New York</option>
-                      <option>New Jersey</option>
-                    </select>
-                  </div>
+                  <div class="form-group">
+                     
+                       <input id="state" type="text" name="state" required  class="input-material">
+                      <label for="login-password" class="label-material">State</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="city" type="text" name="city" required  class="input-material">
+                      <label for="login-password" class="label-material">city</label>
+                   </div>
                      <div class="form-group">
-                      <input id="zipcode" type="text" name="zipcode" required class="input-material">
-                      <label for="login-email" class="label-material">Zip-Code</label>
+                      <input id="zipcode" type="text" name="zipcode" required  class="input-material">
+                      <label for="zipcode" class="label-material">Zip-Code</label>
                     </div>
                     <div class="form-group">
                       <input id="address" type="text" name="address" required class="input-material">

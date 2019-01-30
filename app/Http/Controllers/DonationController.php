@@ -33,6 +33,7 @@ class DonationController extends Controller
           'donated_by'    =>   auth()->user()->email,
           'no_of_tickets' =>   $request['ticketno'],
           'comments'      =>   $request['comments'],
+          'tracking_id'   =>   "FC-DT-".rand(23,1948)
         ]);
 
         return redirect()->back()->with('success', 'You have successfully donated tickets');
