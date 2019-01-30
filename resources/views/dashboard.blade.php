@@ -168,7 +168,7 @@
                   <h4 class="font-weight-normal mb-3">Tickets Value
                     <i class="mdi mdi-chart-line mdi-24px float-right"></i>
                   </h4>
-                  <h2 class="mb-5">$ 15,000</h2>
+                  <h2 class="mb-5">100 tickets</h2>
                   <h6 class="card-text">Increased by 60%</h6>
                 </div>
               </div>
@@ -180,7 +180,7 @@
                   <h4 class="font-weight-normal mb-3">Weekly Ticket Usage
                     <i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
                   </h4>
-                  <h2 class="mb-5">4,633</h2>
+                  <h2 class="mb-5">10</h2>
                   <h6 class="card-text">Decreased by 10%</h6>
                 </div>
               </div>
@@ -189,10 +189,10 @@
               <div class="card bg-gradient-success card-img-holder text-white">
                 <div class="card-body">
                   <img src="{{ asset('images/dashboard/circle.svg') }}" class="card-img-absolute" alt="circle-image"/>                                    
-                  <h4 class="font-weight-normal mb-3">Unique Users
+                  <h4 class="font-weight-normal mb-3">Unique Ticket Users
                     <i class="mdi mdi-diamond mdi-24px float-right"></i>
                   </h4>
-                  <h2 class="mb-5">95,5741</h2>
+                  <h2 class="mb-5">10</h2>
                   <h6 class="card-text">Increased by 5%</h6>
                 </div>
               </div>
@@ -208,7 +208,7 @@
                       <thead>
                         <tr> 
                           <th>
-                            Ticket
+                            Ticket ID
                           </th>
                           <th>
                             Quantity
@@ -219,85 +219,43 @@
                           <th>
                             Donated on
                           </th>
+                          @can('isAdmin')
                           <th>
-                            Tracking ID
+                            Donated by
                           </th>
+                          
+                           <th>
+                           Delete
+                          </th>
+                          @endcan
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          
+                         @foreach($tickets as $ticket) 
+                        <tr>                        
                           <td>
-                            Crispy Chicken Tickets
+                            WD-12345
                           </td>
                           <td>
-                            1000
+                            {{$ticket->no_of_tickets}} 
                           </td>
                           <td>
                             <label class="badge badge-gradient-success">Available</label>
                           </td>
                           <td>
-                            January 5, 2019
+                            {{$ticket->created_at}}
                           </td>
+                           @can('isAdmin')
                           <td>
-                            WD-12345
+                            {{$ticket->name}}
                           </td>
+                         
+                           <td>
+                           <i style="font-size: 30px;" class=" mdi mdi-delete-forever "></i>
+                          </td>   
+                          @endcan                   
                         </tr>
-                        <tr>
-                          
-                          <td>
-                            Crispy Chicken Tickets
-                          </td>
-                          <td>
-                            1000
-                          </td>
-                          <td>
-                            <label class="badge badge-gradient-success">Available</label>
-                          </td>
-                          <td>
-                            January 5, 2019
-                          </td>
-                          <td>
-                            WD-12345
-                          </td>
-                        </tr>
-                        <tr>
-                          
-                          <td>
-                            Crispy Chicken Tickets
-                          </td>
-                          <td>
-                            1000
-                          </td>
-                          <td>
-                            <label class="badge badge-gradient-primary">Available</label>
-                          </td>
-                          <td>
-                            January 5, 2019
-                          </td>
-                          <td>
-                            WD-12345
-                          </td>
-                        </tr>
-                       <tr>
-                          
-                          <td>
-                            Crispy Chicken Tickets
-                          </td>
-                          <td>
-                            1000
-                          </td>
-                          <td>
-                            <label class="badge badge-gradient-danger">Available</label>
-                          </td>
-                          <td>
-                            January 5, 2019
-                          </td>
-                          <td>
-                            WD-12345
-                          </td>
-                        </tr>
-                        </tr>
+                        @endforeach 
                       </tbody>
                     </table>
                   </div>

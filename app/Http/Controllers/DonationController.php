@@ -42,7 +42,14 @@ class DonationController extends Controller
 
       $tickets = Donatedtickets::where('donated_by',  auth()->user()->email)->get();
      
-      return view('donate')->with('tickets');
+      return view('donate')->with('tickets', $tickets);
+    }
+
+    public function allDonatedTickets(){
+
+      $tickets = Donatedtickets::where('donated_by',  auth()->user()->email)->get();
+     
+      return view('all-tickets')->with('tickets', $tickets);
     }
     
 }

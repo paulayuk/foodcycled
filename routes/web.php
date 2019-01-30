@@ -38,7 +38,7 @@ Auth::routes();
 //admin
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/all-pantries', 'DashboardController@allPantries')->name('all-pantries');
-Route::get('/all-tickets', 'DashboardController@allDonatedTickets')->name('all-tickets');
+
 Route::get('/all-users', 'DashboardController@allUsers')->name('all-users');
 Route::get('/site-settings', 'DashboardController@siteSettings')->name('site-settings');
 Route::get('/admin-settings','DashboardController@adminSettings')->name('admin-settings');
@@ -47,8 +47,6 @@ Route::get('/admin-settings','DashboardController@adminSettings')->name('admin-s
 Route::get('/redeem-tickets','DashboardController@redeemTickets')->name('redeem-tickets');
 Route::get('/admin-settings','DashboardController@adminSettings')->name('admin-settings');
 
-//donor
-Route::get('/donate','DashboardController@donate')->name('donate');
 
 //pantry
 Route::get('/p-site-settings','DashboardController@pantrySiteSettings')->name('p-site-settings');
@@ -56,3 +54,5 @@ Route::get('/pantry-profile','DashboardController@pantryProfile')->name('pantry-
 
 //donation
 Route::post('/donatetickets', 'DonationController@processDonation')->name('donatetickets');
+Route::get('/donate','DonationController@getAllDonatedTickets')->name('donate');
+Route::get('/all-tickets', 'DonationController@allDonatedTickets')->name('all-tickets');

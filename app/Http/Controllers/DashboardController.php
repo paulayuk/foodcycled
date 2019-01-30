@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Donatedtickets;
 use App\User;
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
@@ -25,7 +26,10 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+
+      $tickets = Donatedtickets::where('donated_by',  auth()->user()->email)->get();
+
+        return view('dashboard')->with('tickets', $tickets);
     }
 
     public function allPantries()
@@ -36,15 +40,14 @@ class DashboardController extends Controller
     public function allDonatedTickets()
     {
 
-        $tickets = Donatedtickets::where('donated_by',  auth()->user()->email)->get(); 
         return view('all-tickets');
     }
 
      public function allUsers()
     {
-        $users = User::get();
-        //dd($users);
-        return view('all-users')->with('users');
+        $users = User::all();
+ 
+        return view('all-users')->with('users', $users);
     }
 
     public function siteSettings()
@@ -64,9 +67,9 @@ class DashboardController extends Controller
 
     public function donate()
     {
-        $tickets = Donatedtickets::where('donated_by',  auth()->user()->email)->get(); 
         
-        return view('donate')->with('tickets');
+        
+        return view('donate');
     }
 
      public function pantrySiteSettings()

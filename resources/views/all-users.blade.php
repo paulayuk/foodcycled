@@ -187,22 +187,23 @@
                       </tr>
                     </thead>
                     <tbody>
-                      {{-- @foreach($users as $user) --}}
+                      
+                      @foreach($users as $user) 
                       <tr>
                         <td>
-                          {{-- {{$user->id}} --}}
+                          {{$user->id}}
                         </td>
                         <td>
-                          Herman Beck
+                           {{$user->email}} 
                         </td>
                         <td>
-                          New Jersey
+                          {{$user->city}} 
                         </td>
                         <td>
-                          johne@hello.com
+                           {{$user->email}} 
                         </td>
                         <td>
-                          May 15, 2019
+                           {{$user->created_at}} 
                         </td>
                          <td>
                          4
@@ -211,7 +212,7 @@
                            <i style="font-size: 30px;" class=" mdi mdi-delete-forever "></i>
                          </td>
                       </tr>
-                      {{-- @endforeach --}}
+                       @endforeach 
                     </tbody>
                   </table>
                 </div>

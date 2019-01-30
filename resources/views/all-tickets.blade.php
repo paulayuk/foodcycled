@@ -164,7 +164,7 @@
                       <thead>
                         <tr> 
                           <th>
-                            Ticket
+                            Ticket ID
                           </th>
                           <th>
                             Quantity
@@ -175,100 +175,43 @@
                           <th>
                             Donated on
                           </th>
+                          @can('isAdmin')
                           <th>
                             Donated by
                           </th>
+                          
                            <th>
                            Delete
                           </th>
+                          @endcan
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          
+                         @foreach($tickets as $ticket) 
+                        <tr>                        
                           <td>
-                            Crispy Chicken Tickets
+                            WD-12345
                           </td>
                           <td>
-                            1000
-                          </td>
-                          <td>
-                            <label class="badge badge-gradient-success">Available</label>
-                          </td>
-                          <td>
-                            January 5, 2019
-                          </td>
-                          <td>
-                            Pantries
-                          </td>
-                          <td>
-                           <i style="font-size: 30px;" class=" mdi mdi-delete-forever "></i>
-                          </td>
-                        </tr>
-                        <tr>
-                          
-                          <td>
-                            Crispy Chicken Tickets
-                          </td>
-                          <td>
-                            1000
+                            {{$ticket->no_of_tickets}} 
                           </td>
                           <td>
                             <label class="badge badge-gradient-success">Available</label>
                           </td>
                           <td>
-                            January 5, 2019
+                            {{$ticket->created_at}}
                           </td>
+                           @can('isAdmin')
                           <td>
-                            Pantries
+                            {{$ticket->name}}
                           </td>
-                          <td>
+                         
+                           <td>
                            <i style="font-size: 30px;" class=" mdi mdi-delete-forever "></i>
-                          </td>
+                          </td>   
+                          @endcan                   
                         </tr>
-                        <tr>
-                          
-                          <td>
-                            Crispy Chicken Tickets
-                          </td>
-                          <td>
-                            1000
-                          </td>
-                          <td>
-                            <label class="badge badge-gradient-primary">Available</label>
-                          </td>
-                          <td>
-                            January 5, 2019
-                          </td>
-                          <td>
-                            Pantries
-                          </td>
-                          <td>
-                           <i style="font-size: 30px;" class=" mdi mdi-delete-forever "></i>
-                          </td>
-                        </tr>
-                       <tr>
-                          
-                          <td>
-                            Crispy Chicken Tickets
-                          </td>
-                          <td>
-                            1000
-                          </td>
-                          <td>
-                            <label class="badge badge-gradient-danger">Available</label>
-                          </td>
-                          <td>
-                            January 5, 2019
-                          </td>
-                          <td>
-                            Pantries
-                          </td>
-                          <td>
-                           <i style="font-size: 30px;" class=" mdi mdi-delete-forever "></i>
-                          </td>
-                        </tr>
-                        </tr>
+                        @endforeach 
                       </tbody>
                     </table>
                   </div>

@@ -213,7 +213,7 @@
                       <thead>
                         <tr> 
                           <th>
-                            Ticket
+                            Ticket ID
                           </th>
                           <th>
                             Quantity
@@ -224,31 +224,27 @@
                           <th>
                             Donated on
                           </th>
-                          <th>
-                            Tracking ID
-                          </th>
+                          
                         </tr>
                       </thead>
                       <tbody>
-                       {{--  @foreach($tickets as $ticket) --}}
+                         @foreach($tickets as $ticket) 
                         <tr>                        
                           <td>
-                           {{--  {{$tickets->name}} --}}
+                            WD-12345
                           </td>
                           <td>
-                            {{-- {{$ticket->no_of_tickets}} --}}
+                            {{$ticket->no_of_tickets}} 
                           </td>
                           <td>
                             <label class="badge badge-gradient-success">Available</label>
                           </td>
                           <td>
-                           {{--  {{$ticket->created_at}} --}}
+                            {{$ticket->created_at}}
                           </td>
-                          <td>
-                            WD-12345
-                          </td>
+                          
                         </tr>
-                       {{-- @endforeach --}}
+                        @endforeach 
                       </tbody>
                     </table>
                   </div>
