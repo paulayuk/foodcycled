@@ -26,7 +26,7 @@
   <link href="{{ asset('plugins/seiyria-bootstrap-slider/dist/css/bootstrap-slider.min.css') }}" rel="stylesheet">
   <!-- CUSTOM CSS -->
   <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-  <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
+  
   <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
   <link href="{{ asset('css/index-landingpage/style.css') }}" rel="stylesheet">
   <link href="{{ asset('css/index-landingpage/landing-page.css') }}" rel="stylesheet">
@@ -46,7 +46,7 @@
   <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
     
   <link href="{{ asset('css/search2.css') }}" rel="stylesheet">
-
+ 
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Space+Mono" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -64,6 +64,12 @@
 .newfam {
   font-family: 'Dosis', serif;
 }
+.img,
+.blog-img,
+.user-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
 
 .login-button {
   border: 0px !important;
