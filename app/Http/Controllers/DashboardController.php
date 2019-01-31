@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Donatedtickets;
+use App\usedticket;
 use App\User;
 use Illuminate\Support\Facades\DB;
 
@@ -29,7 +30,9 @@ class DashboardController extends Controller
 
       $tickets = Donatedtickets::where('donated_by',  auth()->user()->email)->get();
 
-        return view('dashboard')->with('tickets', $tickets);
+      $utickets = usedticket::where('used_by',  auth()->user()->organization_name)->get();
+
+    return view('dashboard')->with('tickets', $tickets)->with('utickets', $utickets);
     }
 
     public function allPantries()

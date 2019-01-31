@@ -50,97 +50,36 @@
       </div>
     </div>
     <div class="row">
-      <!-- offer 01 -->
+    @foreach($pantries as $pantry)
       <div class="col-sm-12 col-lg-4">
         <!-- product card -->
-<div class="product-item bg-light">
-  <div class="card">
-    <div class="thumb-content">
-      <!-- <div class="price">$200</div> -->
-      <a href="">
-        <img class="card-img-top img-fluid" src="{{ asset('images/work3.jpg') }}" alt="Card image cap">
-      </a>
-    </div>
-    <div class="card-body">
-        <h4 class="card-title"><a href="">Pantry One</a></h4>
-        <ul class="list-inline product-meta">
-          <li class="list-inline-item">
-            <h6 style="padding-right: 15px;"><i class="fas fa-user-alt"></i><i style="font-size: 10px">Donated : </i>1800 tickets</h6 style="padding-right: 5px;">
-          </li>
-          <li class="list-inline-item">
-            <a href=""><i style="font-size: 10px">Joined On: </i><i class="fa fa-calendar"></i>26th December</a>
-          </li>
-        </ul>
-        <div class="act-buttons" style="margin-bottom: 20px; margin-right: 5px;">
-                <a href="ticket.pantry.html" class="btn btn-info-gradiant font-14">
-                Visit Page &rarr;</a>
+        <div class="product-item bg-light">
+          <div class="card">
+            <div class="thumb-content">
+              <!-- <div class="price">$200</div> -->
+              <a href="">
+                <img class="card-img-top img-fluid" src="{{ asset('images/work3.jpg') }}" alt="Card image cap">
+              </a>
             </div>
-    </div>
-  </div>
-</div>
-
-
-
-      </div>
-      <div class="col-sm-12 col-lg-4">
-        <!-- product card -->
-<div class="product-item bg-light">
-  <div class="card">
-    <div class="thumb-content">
-      <!-- <div class="price">$200</div> -->
-      <a href="">
-        <img class="card-img-top img-fluid" src="{{ asset('images/work3.jpg') }}" alt="Card image cap">
-      </a>
-    </div>
-    <div class="card-body">
-        <h4 class="card-title"><a href="">Pantry Two</a></h4>
-        <ul class="list-inline product-meta">
-          <li class="list-inline-item">
-            <h6 style="padding-right: 15px;"><i class="fas fa-user-alt"></i><i style="font-size: 10px">Donated : </i>1200 tickets</h6 style="padding-right: 5px;">
-          </li>
-          <li class="list-inline-item">
-            <a href=""><i style="font-size: 10px">Joined On: </i><i class="fa fa-calendar"></i>26th December</a>
-          </li>
-        </ul>
-        <div class="act-buttons" style="margin-bottom: 20px; margin-right: 5px;">
+            <div class="card-body">
+              <h4 class="card-title"><a href="">{{$pantry->organization_name}}</a></h4>
+              <ul class="list-inline product-meta">
+                <li class="list-inline-item">
+                  {{-- <h6 style="padding-right: 15px;"><i class="fas fa-user-alt"></i><i style="font-size: 10px">In : </i>1200 </h6 style="padding-right: 5px;"><br/> --}}
+                </li>
+                <li class="list-inline-item">
+                  <a href=""><i style="font-size: 10px">Joined On: </i><i class="fa fa-calendar"></i>{{$pantry->created_at}}</a>
+                </li>
+              </ul>
+            <div class="act-buttons" style="margin-bottom: 20px; margin-right: 5px;">
                 <a href="pantry.html" class="btn btn-info-gradiant font-14">
                 Visit Page &rarr;</a>
             </div>
-    </div>
-  </div>
-</div>
-
-
-
+          </div>
+        </div>
       </div>
-      <div class="col-sm-12 col-lg-4">
-        <!-- product card -->
-<div class="product-item bg-light">
-  <div class="card">
-    <div class="thumb-content">
-      <!-- <div class="price">$200</div> -->
-      <a href="">
-        <img class="card-img-top img-fluid" src="{{ asset('images/work3.jpg') }}" alt="Card image cap">
-      </a>
     </div>
-    <div class="card-body">
-        <h4 class="card-title"><a href="">Pantry Three</a></h4>
-        <ul class="list-inline product-meta">
-          <li class="list-inline-item">
-            <h6 style="padding-right: 15px;"><i class="fas fa-user-alt"></i><i style="font-size: 10px">Donated : </i>1000 tickets</h6 style="padding-right: 5px;">
-          </li>
-          <li class="list-inline-item">
-            <a href=""><i style="font-size: 10px">Joined On: </i><i class="fa fa-calendar"></i>26th December</a>
-          </li>
-        </ul>
-        <div class="act-buttons" style="margin-bottom: 20px; margin-right: 5px;">
-                <a href="pantry.html" class="btn btn-info-gradiant font-14">
-                Visit Page &rarr;</a>
-            </div>
-    </div>
-  </div>
-</div>
-    </div>    
+   @endforeach
     </div>
   </div>
    

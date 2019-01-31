@@ -161,6 +161,7 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Update Site Settings</h4>
+                  {{Auth::user()->organization_name}}
                   <p class="card-description">
                     
                   </p>

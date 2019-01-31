@@ -52,5 +52,11 @@ class User extends Authenticatable
     //        return true;
     //     }
     // }
+    // 
+     public function tickets(){
+        return $this->hasMany('App\Donatedtickets');
+    }
+
+   
 
 }

@@ -26,7 +26,7 @@
   <link href="{{ asset('plugins/seiyria-bootstrap-slider/dist/css/bootstrap-slider.min.css') }}" rel="stylesheet">
   <!-- CUSTOM CSS -->
   <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-
+  <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
   <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
   <link href="{{ asset('css/index-landingpage/style.css') }}" rel="stylesheet">
   <link href="{{ asset('css/index-landingpage/landing-page.css') }}" rel="stylesheet">
@@ -34,6 +34,7 @@
   <link href="img/favicon.png" rel="shortcut icon">
   
   <link rel="stylesheet" type="text/css" href="{{ asset('css/about2.css') }}">
+  
   <link rel="stylesheet" type="text/css" href="{{ asset('css/search.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('css/about_responsive.css') }}">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

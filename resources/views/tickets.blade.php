@@ -57,90 +57,36 @@
     </div>
     <div class="row">
       <!-- offer 01 -->
+      @foreach($tickets as $ticket)
       <div class="col-sm-12 col-lg-4">
         <!-- product card -->
-<div class="product-item bg-light">
-  <div class="card">
-    <div class="thumb-content">
-      <!-- <div class="price">$200</div> -->
-      <a href="">
-        <img class="card-img-top img-fluid" src="{{ asset('images/products/products-1.jpg') }}" alt="Card image cap">
-      </a>
-    </div>
-    <div class="card-body">
-        <h4 class="card-title"><a href="">Stew And Fish Ticket</a></h4>
-        <ul class="list-inline product-meta">
-          <li class="list-inline-item">
-            <h6 style="padding-right: 15px;"><i class="fas fa-user-alt"></i><i style="font-size: 10px">Donated by: </i>Desam Jones</h6 style="padding-right: 5px;">
-          </li>
-          
-        </ul>
-        <div class="act-buttons" style="margin-bottom: 20px; margin-right: 5px;">
-                <a href="ticket.html" class="btn btn-info-gradiant font-14">
-                Reedem Ticket &rarr;</a>
+        <div class="product-item bg-light">
+          <div class="card">
+            <div class="thumb-content">
+              <!-- <div class="price">$200</div> -->
+              <a href="">
+                <img class="card-img-top img-fluid" src="{{ asset('images/products/products-1.jpg') }}" alt="Card image cap">
+              </a>
             </div>
-    </div>
-  </div>
-</div>
-
-
-
-      </div>
-      <div class="col-sm-12 col-lg-4">
-        <!-- product card -->
-<div class="product-item bg-light">
-  <div class="card">
-    <div class="thumb-content">
-      <!-- <div class="price">$200</div> -->
-      <a href="">
-        <img class="card-img-top img-fluid" src="{{ asset('images/products/products-1.jpg') }}" alt="Card image cap">
-      </a>
-    </div>
-    <div class="card-body">
-        <h4 class="card-title"><a href="">Stew And Fish Ticket</a></h4>
-        <ul class="list-inline product-meta">
-          <li class="list-inline-item">
-            <h6 style="padding-right: 15px;"><i class="fas fa-user-alt"></i><i style="font-size: 10px">Donated by: </i>Desam Jones</h6 style="padding-right: 5px;">
-          </li>
-         
-        </ul>
-        <div class="act-buttons" style="margin-bottom: 20px; margin-right: 5px;">
-                <a href="ticket.html" class="btn btn-info-gradiant font-14">
-                Reedem Ticket &rarr;</a>
+            <div class="card-body">
+                <h4 class="card-title"><a href="">{{$ticket->name}}</a></h4>
+                <ul class="list-inline product-meta">
+                  <li class="list-inline-item">
+                    <h6 style="padding-right: 15px;"><i class="fas fa-user-alt"></i><i style="font-size: 10px">Donated by: </i>{{$ticket->donated_by}}</h6 style="padding-right: 5px;">
+                  </li>
+                  
+                </ul>
+                <div class="act-buttons" style="margin-bottom: 20px; margin-right: 5px;">
+                    <a href="/ticket/{{$ticket->id}}" class="btn btn-info-gradiant font-14">
+                    Reedem Ticket &rarr;</a>
+                </div>
             </div>
-    </div>
-  </div>
-</div>
-
-
-
-      </div>
-      <div class="col-sm-12 col-lg-4">
-        <!-- product card -->
-<div class="product-item bg-light">
-  <div class="card">
-    <div class="thumb-content">
-      <!-- <div class="price">$200</div> -->
-      <a href="">
-        <img class="card-img-top img-fluid" src="{{ asset('images/products/products-1.jpg') }}" alt="Card image cap">
-      </a>
-    </div>
-    <div class="card-body">
-        <h4 class="card-title"><a href="">Stew And Fish Ticket</a></h4>
-        <ul class="list-inline product-meta">
-          <li class="list-inline-item">
-            <h6 style="padding-right: 15px;"><i class="fas fa-user-alt"></i><i style="font-size: 10px">Donated by: </i>Desam Jones</h6 style="padding-right: 5px;">
-          </li>
-          
-        </ul>
-        <div class="act-buttons" style="margin-bottom: 20px; margin-right: 5px;">
-                <a href="ticket.html" class="btn btn-info-gradiant font-14">
-                Reedem Ticket &rarr;</a>
-            </div>
-    </div>
-  </div>
-</div>
-    </div>    
+          </div>
+        </div>
+     </div>
+ @endforeach
+      
+      
     </div>
   </div>
    

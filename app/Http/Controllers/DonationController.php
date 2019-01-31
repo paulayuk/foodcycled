@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Donatedtickets;
+use App\usedticket;
 
 class DonationController extends Controller
 {
@@ -30,7 +31,7 @@ class DonationController extends Controller
           'city'          =>   $request['city'],
           'state'         =>   $request['state'],
           'zipcode'       =>   $request['zipcode'],
-          'donated_by'    =>   auth()->user()->email,
+          'donated_by'    =>   auth()->user()->organization_name,
           'no_of_tickets' =>   $request['ticketno'],
           'comments'      =>   $request['comments'],
           'tracking_id'   =>   "FC-DT-".rand(23,1948)
@@ -51,6 +52,27 @@ class DonationController extends Controller
       $tickets = Donatedtickets::where('donated_by',  auth()->user()->email)->get();
      
       return view('all-tickets')->with('tickets', $tickets);
+    }
+
+      public function useTicket(Request $request){
+
+      if($request){
+
+    $tickets = Donatedtickets::where('tracking_id',  $request['ticket_no'])->first();
+
+    usedticket::create([
+        'ticket_id'          =>   $request['ticket_no'],
+        'used_by'            =>  auth()->user()->organization_name
+      ]);
+    
+    $tickets->update([
+       'no_of_tickets' => $tickets->no_of_tickets - 1
+    ]);
+
+
+    }
+     
+      return redirect()->back()->with('success', 'You have successfully used a ticket');
     }
     
 }

@@ -32,7 +32,7 @@ class AuthServiceProvider extends ServiceProvider
         });
 
         $gate->define('isUser', function($user){
-            return $user->category == 'individual';
+            return $user->category == 'user';
         });
 
         $gate->define('isDonor', function($user){

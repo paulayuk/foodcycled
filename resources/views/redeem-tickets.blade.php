@@ -138,6 +138,13 @@
             </span>
           </li>
           @endcan
+           @can('isUser')   
+          <li class="nav-item sidebar-actions">
+            <span class="nav-link">        
+            <a href="/donate" class="btn btn-block btn-lg btn-gradient-danger fw mt-4" style="color: white !important;">Upgrade To Pro</a>             
+            </span>
+          </li>
+          @endcan
         </ul>
       </nav>
       <!-- partial -->
@@ -160,19 +167,20 @@
                 <div class="card-body">
                   <h4 class="card-title">Redeem Tickets</h4>
                   <p class="card-description">
-                    
+                     @if (session('success'))
+                       <div class="alert alert-success">
+                         {{ session('success') }}
+                       </div>
+                    @endif
                   </p>
-                  <form class="forms-sample">
+                  <form method="POST" action="/use-ticket" class="forms-sample">
+                    @csrf
                     <div class="form-group">
                       <label for="exampleInputUsername1">Ticket No</label>
-                      <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Username">
+                      <input type="text" name="ticket_no" class="form-control" id="ticket_no" placeholder="Ticket no">
                     </div>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-                    </div>
-                    
-                    <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
+
+                    <button type="submit" class="btn btn-gradient-primary mr-2">Redeem</button>
                     
                   </form>
                 </div>

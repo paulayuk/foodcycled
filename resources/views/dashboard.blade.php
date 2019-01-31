@@ -138,6 +138,13 @@
             </span>
           </li>
           @endcan
+          @can('isUser')   
+          <li class="nav-item sidebar-actions">
+            <span class="nav-link">        
+            <a href="#" class="btn btn-block btn-lg btn-gradient-danger fw mt-4" style="color: white !important;">Upgrade To Pro</a>             
+            </span>
+          </li>
+          @endcan
         </ul>
       </nav>
       <!-- partial -->
@@ -160,6 +167,7 @@
               </ul>
             </nav>
           </div>
+          @if(auth()->user()->category != "user")
           <div class="row">
             <div class="col-md-4 stretch-card grid-margin">
               <div class="card bg-gradient-danger card-img-holder text-white">
@@ -198,6 +206,7 @@
               </div>
             </div>
           </div>
+         
           <div class="row">
             <div class="col-12 grid-margin">
               <div class="card">
@@ -263,8 +272,56 @@
               </div>
             </div>
           </div>
-         
-        
+         @endif
+        <div class="row">
+            <div class="col-12 grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Recent Tickets</h4>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr> 
+                          <th>
+                            Ticket ID
+                          </th>
+                          <th>
+                            Quantity
+                          </th>
+                          <th>
+                            Status
+                          </th>
+                          <th>
+                            Used on
+                          </th>
+                         
+                        </tr>
+                      </thead>
+                      <tbody>
+                         @foreach($utickets as $ticket) 
+                        <tr>                        
+                          <td>
+                            {{$ticket->ticket_id}}
+                          </td>
+                          <td>
+                            1
+                          </td>
+                          <td>
+                            <label class="badge badge-gradient-success">Available</label>
+                          </td>
+                          <td>
+                            {{$ticket->created_at}}
+                          </td>
+                                           
+                        </tr>
+                        @endforeach 
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
        
         <!-- partial -->

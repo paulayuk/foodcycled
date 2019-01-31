@@ -87,82 +87,27 @@
                         </tr>
                       </thead>
                       <tbody>
+                     @foreach($tickets as $ticket)
                         <tr>
                           <td>
                             <img src="{{ asset('images/app.jpg') }}" class="mr-2" alt="image">
                            
                           </td>
                           <td>
-                            <a href="tickets.html">Crispy Chicken Tickets</a>
+                            <a href="/ticket/{{$ticket->id}}">{{$ticket->name}}</a>
                           </td>
                           <td>
-                            Walmart
+                            {{$ticket->donated_by}}
                           </td>
                           <td>
                             <label class="badge badge-gradient-success">Available</label>
                           </td>
                           <td>
-                            California
+                            {{$ticket->state}}
                           </td>
                       
                         </tr>
-                        <tr>
-                          <td>
-                            <img src="{{ asset('images/app.jpg') }}" class="mr-2" alt="image">
-                            
-                          </td>
-                          <td>
-                           <a href="tickets.html"> Crispy Chicken Tickets</a>
-                          </td>
-                          <td>
-                            Subway
-                          </td>
-                          <td>
-                            <label class="badge badge-gradient-primary">Available</label>
-                          </td>
-                          <td>
-                            New York
-                          </td>
-                      
-                        </tr>
-                       <tr>
-                          <td>
-                            <img src="{{ asset('images/app.jpg') }}" class="mr-2" alt="image">
-                            
-                          </td>
-                          <td>
-                            <a href="tickets.html">Crispy Chicken Tickets</a>
-                          </td>
-                          <td>
-                            Chickfila
-                          </td>
-                          <td>
-                            <label class="badge badge-gradient-info">Available</label>
-                          </td>
-                          <td>
-                            Boston
-                          </td>
-                      
-                        </tr>
-                      <tr>
-                          <td>
-                            <img src="{{ asset('images/app.jpg') }}" class="mr-2" alt="image">
-                           
-                          </td>
-                          <td>
-                           <a href="tickets.html"> Crispy Chicken Tickets</a>
-                          </td>
-                          <td>
-                            Walmart
-                          </td>
-                          <td>
-                            <label class="badge badge-gradient-danger">Unvailable</label>
-                          </td>
-                          <td>
-                            Georgia
-                          </td>
-                      
-                        </tr>
+                       @endforeach
                         
                       </tbody>
                     </table>

@@ -15,6 +15,7 @@
                  <span style="color: blue; font-weight: bold">Thanks for donating</span>
                     <div class="form-group">
                       <input id="name" type="text" name="name" required  class="input-material">
+                      <input id="category" type="hidden" name="category" value="donor">
                       <label for="login-username" class="label-material">Your Name or Organization name</label>
                     </div>
                     <div class="form-group">

@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,14 +13,27 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+	$tickets = DB::table('donatedtickets')->get();
+    return view('index')->with('tickets', $tickets);
 });
+
 Route::get('/tickets', function () {
-    return view('tickets');
+	$tickets = DB::table('donatedtickets')->get();
+    return view('tickets')->with('tickets', $tickets);
 });
+
+
+Route::get('/ticket/{id}', function ($id) {
+	$ticket = DB::table('donatedtickets')->where('id', $id)->first();
+    return view('ticket')->with('ticket', $ticket);
+});
+
+
 Route::get('/pantries', function () {
-    return view('pantries');
+	$pantries = DB::table('users')->where('category', 'pantry')->get();
+    return view('pantries')->with('pantries', $pantries);
 });
+
 Route::get('/about', function () {
     return view('about');
 });
@@ -31,6 +45,10 @@ Route::get('/contact', function () {
 });
 Route::get('/donation', function(){
 	return view('auth.donation');
+});
+
+Route::get('/home', function(){ 
+    return Redirect::to('/dashboard'); 
 });
 
 Auth::routes();
@@ -56,3 +74,4 @@ Route::get('/pantry-profile','DashboardController@pantryProfile')->name('pantry-
 Route::post('/donatetickets', 'DonationController@processDonation')->name('donatetickets');
 Route::get('/donate','DonationController@getAllDonatedTickets')->name('donate');
 Route::get('/all-tickets', 'DonationController@allDonatedTickets')->name('all-tickets');
+Route::post('/use-ticket', 'DonationController@useTicket')->name('useticket');
