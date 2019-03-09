@@ -161,56 +161,53 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Update Site Settings</h4>
-                  {{Auth::user()->organization_name}}
+                 <a href="#">
+                  {{Auth::user()->organization_name .env('APP_PANTRY')}}
+                 </a>
                   <p class="card-description">
                     
                   </p>
                   <form class="forms-sample">
-                    <div class="form-group">
-                      <label for="exampleInputName1">Pantry Name</label>
-                      <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
-                    </div>
+ 
                     <div class="form-group">
                       <label for="exampleTextarea1">About Us</label>
-                      <textarea class="form-control" placeholder="Write about your organization" id="exampleTextarea1" rows="4"></textarea>
+                      <textarea class="form-control" placeholder="Write about your organization" id="about" name="about" rows="4"></textarea>
                     </div>   
+   
                     <div class="form-group">
-                      <label for="exampleTextarea1">Leadership</label>
-                      <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleTextarea1">Services</label>
-                      <textarea class="form-control" placeholder="service 1, service 2 etc" id="exampleTextarea1" rows="4"></textarea>
+                      <label for="exampleTextarea1">Our Services</label>
+                      <textarea class="form-control" placeholder="service 1, service 2 etc" id="services" name="services" rows="4"></textarea>
                     </div>
                      <div class="form-group">
                       <label for="exampleInputCity1">Operation Hours</label>
-                      <input type="text" class="form-control" id="exampleInputCity1" placeholder="E.g 9 - 5 Monday - Friday">
+                      <input type="text" class="form-control" id="ophours" placeholder="E.g 9 - 5 Monday - Friday" name="ophours">
                     </div> 
                     <h3> Contact Details </h3>              
              
                     <div class="form-group">
                       <label for="exampleInputCity1">Location</label>
-                      <input type="text" class="form-control" id="exampleInputCity1" placeholder="Location">
+                      <input type="text" class="form-control" id="location" placeholder="Location" name="location">
                     </div>
                      <div class="form-group form-inline">
                       <label class="mr-2" for="inlineFormInputName2">City: </label>
-                    <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="E.g Allen Ave.">
+                    <input type="text" class="form-control mb-2 mr-sm-2" id="city" placeholder="E.g Allen Ave." name="city">
                    
                       <label class="mr-2"  for="inlineFormInputName2">State: </label>
-                    <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="New York">
+                    <input type="text" class="form-control mb-2 mr-sm-2" id="state" placeholder="New York" name="state">
                   
                     <label class="mr-2" for="inlineFormInputGroupUsername2">Zip: </label>
                     <div class="input-group mb-2 mr-sm-2">                
-                      <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="2938">
+                      <input type="text" class="form-control" id="zip" name="zip" placeholder="2938">
                     </div>
                     
                     </div>
                       <div class="form-group form-inline">
                       <label class="mr-4" for="exampleInputEmail3">Email address:</label>
-                      <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email" >
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Email" >
 
-                      <label class="ml-4 mr-4" for="inlineFormInputName2">Phone No: </label>
-                    <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="+2349383993344">
+                      <label class="ml-4 mr-4"  for="inlineFormInputName2">Phone No: </label>
+                      
+                    <input type="text" class="form-control mb-2 mr-sm-2" name="phoneno" id="phoneno" placeholder="+2349383993344">
                     </div>
                 
                     <div class="form-group">

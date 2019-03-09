@@ -58,20 +58,18 @@ class DonationController extends Controller
 
       if($request){
 
-    $tickets = Donatedtickets::where('tracking_id',  $request['ticket_no'])->first();
+         $tickets = Donatedtickets::where('tracking_id',  $request['ticket_no'])->first();
 
-    usedticket::create([
-        'ticket_id'          =>   $request['ticket_no'],
-        'used_by'            =>  auth()->user()->organization_name
-      ]);
+        usedticket::create([
+            'ticket_id'          =>   $request['ticket_no'],
+            'used_by'            =>  auth()->user()->organization_name
+          ]);
     
-    $tickets->update([
-       'no_of_tickets' => $tickets->no_of_tickets - 1
-    ]);
-
-
-    }
-     
+        $tickets->update([
+           'no_of_tickets' => $tickets->no_of_tickets - 1
+        ]);
+      }
+       
       return redirect()->back()->with('success', 'You have successfully used a ticket');
     }
     

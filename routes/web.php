@@ -76,8 +76,9 @@ Route::get('/donate','DonationController@getAllDonatedTickets')->name('donate');
 Route::get('/all-tickets', 'DonationController@allDonatedTickets')->name('all-tickets');
 Route::post('/use-ticket', 'DonationController@useTicket')->name('useticket');
 
-Route::domain('{pantry_name}.localhost')->group(function () {
-   Route::get('/about', function () {
-    return view('about');
-});
+Route::domain('{pantry_name}.foodcycled.com')->group(function () {
+    Route::get('/', 'PantryController@home');
+    Route::get('/about', 'PantryController@about');
+    Route::get('/services', 'PantryController@services');
+    Route::get('/contact', 'PantryController@contact');
 });
