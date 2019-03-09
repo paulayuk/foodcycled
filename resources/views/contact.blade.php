@@ -39,16 +39,17 @@
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="detail-box p-40 btn-info-gradiant" data-aos="fade-right" data-aos-duration="1200">
-                                            <h2 class="text-white">Foodcycled Headquarters</h2>
-                                            <p class="text-white m-t-30 op-8">251 546 9442
+                                            <h2 class="text-white">Foodcycled </h2>
+                                            <p class="text-white m-t-30 op-8">OMS
                                                 <br> info@foodcycled.com</p>
-                                            <p class="text-white op-8">601 Sherd Ave.
-                                                <br> San Jose, CA 92404</p>
+                                            <p class="text-white op-8">1300 Mercantile Lane Suite 129 -63
+   
+                                                <br> Largo, MD 20774 </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                  </div>
+            </div>
 @endsection

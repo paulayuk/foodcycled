@@ -169,7 +169,8 @@
           <!-- footer logo -->
           <h1 style="color: #ff6a5b">FOODCYCLED</h1>
           <!-- description -->
-          <p class="alt-color" style="color: #747474; font-weight: 450px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p class="alt-color" style="color: #747474; font-weight: 450px;">Food cycled has a core mission of providing for all. No person needing food should go to sleep without one. We helped to facilitate accessibility to food in America and across the globe.</p>
+          <p>Please be a part of the donation drive and feed the hungry.</p>
         </div>
       </div>
       <!-- Link list -->

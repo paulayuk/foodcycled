@@ -23,25 +23,23 @@
 
                   <div class="tab-pane fade show active" id="v-pills-whatwedo" role="tabpanel" aria-labelledby="v-pills-whatwedo-tab">
                     <div>
-                      <h2 class="mb-4">Free Food USA</h2>
-                      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt voluptate, quibusdam sunt iste dolores consequatur</p>
+                      <h2 class="mb-4"></h2>
+                      <p>At Foodcyled we connect the giver with the receiver, making sure food distribution is made easier, while we feed the hungry.</p>
                     </div>
                   </div>
 
                   <div class="tab-pane fade" id="v-pills-mission" role="tabpanel" aria-labelledby="v-pills-mission-tab">
                     <div>
-                      <h2 class="mb-4">Exceptional Feeding Solutions</h2>
-                      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt voluptate, quibusdam sunt iste dolores consequatur</p>
+                      <h2 class="mb-4"></h2>
+                      <p>Food cycled has a core mission of providing for all.</p>
+                
                     </div>
                   </div>
 
                   <div class="tab-pane fade" id="v-pills-goal" role="tabpanel" aria-labelledby="v-pills-goal-tab">
                     <div>
-                      <h2 class="mb-4">Help Our Customers</h2>
-                      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt voluptate, quibusdam sunt iste dolores consequatur</p>
+                      <h2 class="mb-4"></h2>
+                      <p>Our is goal is to make sure that food availability and accessibility is made easy.</p>
                     </div>
                   </div>
                 </div>
