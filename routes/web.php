@@ -76,6 +76,8 @@ Route::get('/donate','DonationController@getAllDonatedTickets')->name('donate');
 Route::get('/all-tickets', 'DonationController@allDonatedTickets')->name('all-tickets');
 Route::post('/use-ticket', 'DonationController@useTicket')->name('useticket');
 
+Route::post('/update-p-site', 'PantryController@updatePantrySite')->name('updatesite');
+
 Route::domain('{pantry_name}.foodcycled.com')->group(function () {
     Route::get('/', 'PantryController@home');
     Route::get('/about', 'PantryController@about');

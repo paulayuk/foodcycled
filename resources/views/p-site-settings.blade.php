@@ -163,9 +163,13 @@
                   <h4 class="card-title">Update Site Settings</h4>
                 
                   <p class="card-description">
-                    
+                     @if (session('success'))
+                     <div class="alert alert-success">
+                       {{ session('success') }}
+                     </div>
+                  @endif
                   </p>
-                  <form class="forms-sample">
+                  <form method="POST" action="{{ route('updatesite') }}" class="forms-sample">
  
                     <div class="form-group">
                       <label for="exampleTextarea1">About Us</label>
