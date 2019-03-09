@@ -21,6 +21,7 @@ class PantryController extends Controller
           'operationhours' => $request['ophours'],
           'location'       => $request['location'],
           'city'           => $request['city'],
+          'name'           => $request['namee'],
           'state'    =>   $request['state'],
           'zip'      =>   $request['zip'],
           'email'    =>   $request['email'],

@@ -171,6 +171,8 @@
                   </p>
                   <form method="POST" action="{{ route('updatesite') }}" class="forms-sample">
                    @csrf
+                   <input type="hidden" id="name" name="namee" 
+                   value="{{ Auth::user()->organization_name }}">
                     <div class="form-group">
                       <label for="exampleTextarea1">About Us</label>
                       <textarea class="form-control" placeholder="Write about your organization" id="about" name="about" rows="4"></textarea>
