@@ -18,7 +18,7 @@ class PantryController extends Controller
          Pantry::create([
           'about'          => $request['about'],
           'services'       => $request['services'],
-          'operationhours' => $request['operationhours'],
+          'operationhours' => $request['ophours'],
           'location'       => $request['location'],
           'city'           => $request['city'],
           'state'    =>   $request['state'],

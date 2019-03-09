@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class usedticket extends Model
+class Pantry extends Model
 {
     //
     protected $table = 'pantries';
