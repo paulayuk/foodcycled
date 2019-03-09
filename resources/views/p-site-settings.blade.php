@@ -161,9 +161,7 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Update Site Settings</h4>
-                 <a href="#">
-                  {{Auth::user()->organization_name .env('APP_PANTRY')}}
-                 </a>
+                
                   <p class="card-description">
                     
                   </p>
